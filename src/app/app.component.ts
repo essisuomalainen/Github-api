@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { GitHubUser } from './interfaces/user';
+import { GithubService } from './service/github.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Coolest repos';
+  title = 'Browse the coolest repositories on Github';
+  users: GitHubUser[] = [];
+  repos: any;
+
+  constructor(private githubService: GithubService) { }
+
+  getUsers() {
+    this.githubService.getData().subscribe((data) => {
+      console.log(data);
+     this.users = data;
+    });
+  }
+
+  getRepos() {
+    this.githubService.getData().subscribe((data) => {
+      console.log(data);
+     this.repos = data;
+    });
+  }
 }
