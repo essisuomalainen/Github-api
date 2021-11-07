@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GitHubUser } from './interfaces/user';
+import { Repository } from './interfaces/repositories';
 import { GithubService } from './service/github.service';
 
 @Component({
@@ -9,22 +9,43 @@ import { GithubService } from './service/github.service';
 })
 export class AppComponent {
   title = 'Browse the coolest repositories on Github';
-  users: GitHubUser[] = [];
-  repos: any;
+  users: any;
+  newArray = [];
+  repos: Repository[] = [];
+  content: Repository[] = [];
 
-  constructor(private githubService: GithubService) { }
+  constructor(private githubService: GithubService) {
+    this.getRepos();
+  }
 
-  getUsers() {
-    this.githubService.getData().subscribe((data) => {
+    getRepos(): void {
+     this.githubService.getRepos().subscribe((data) => {
+         console.log(data);
+         this.repos = data;
+         this.content = this.repos;
+       });
+     }
+ 
+   searchThis(data: any) {
+     this.content = this.repos;
+     console.log(this.content, 'content');
+     if (data) {
+       this.content = this.content.filter((ele, i, array) => {
+         let arrayelement = ele.name.toLowerCase();
+         return arrayelement.includes(data);
+       });
+     }
+     else {
+       console.log(this.content)
+     }
+     console.log(this.content)
+   }
+
+/*  async getUsers() {
+   await this.githubService.getData().subscribe((data) => {
       console.log(data);
      this.users = data;
     });
-  }
+  } */
 
-  getRepos() {
-    this.githubService.getData().subscribe((data) => {
-      console.log(data);
-     this.repos = data;
-    });
-  }
 }

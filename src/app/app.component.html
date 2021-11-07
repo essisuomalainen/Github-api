@@ -1,10 +1,8 @@
 <div class="container">
 <div class="header">
-<app-header [title]="title"></app-header>
+<app-header [data]="content" [title]="title" (searchcriteria)="searchThis($event)"></app-header>
 </div>
-<button (click)="getUsers()">Get users</button>
-<button (click)="getRepos()">Get repos</button>
 <app-users [users]="users"></app-users>
-<app-footer></app-footer>
+<app-footer [data]="content"></app-footer>
 
 </div> 

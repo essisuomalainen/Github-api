@@ -9,11 +9,23 @@ h1 {
 }
 .container {
   width: 100vw;
-  height: 30vh;
+  height: 40vh;
   margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
+.search-bar-container {
+    width: 27rem;
+    height: 2rem;
+  }
+  
+  input {
+    width: 27rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: none;
+  }
+  
 

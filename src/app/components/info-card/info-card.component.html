@@ -1,1 +1,5 @@
-<p>info-card works!</p>
+<div class="card-container">
+  <h2>{{repo.name}}</h2>
+  <p>Owner: {{repo.owner.login}}</p>
+  <app-button class="visit-button" [title]="visit"></app-button>
+</div>

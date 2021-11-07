@@ -1,8 +1,8 @@
 <div class="container">
   <h1>{{title}}</h1>
 <div class="search-container">
-    <app-search-bar></app-search-bar>
-  <app-button></app-button>
+    <div class="search-bar-container"><input type="text" placeholder="Search" [(ngModel)]="searchWord" (input)="searchThis()" id="listSearch"></div>
+  <app-button [title]="search"></app-button>
 </div>
   
 </div>

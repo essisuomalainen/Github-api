@@ -11,6 +11,9 @@ button {
     cursor: pointer;
     margin-left: 2rem;
 }
+a {
+    text-decoration: none;
+}
 
 button:hover {
 	background: #434343;
@@ -19,5 +22,9 @@ button:hover {
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-	transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;   
+}
+
+button a:hover {
+    color: white;
 }

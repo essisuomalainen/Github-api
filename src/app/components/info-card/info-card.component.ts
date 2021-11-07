@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Repository } from 'src/app/interfaces/repositories';
 
 @Component({
   selector: 'app-info-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info-card.component.scss']
 })
 export class InfoCardComponent implements OnInit {
+  @Input() repo: any;
+  visit = 'Visit';
 
   constructor() { }
 
