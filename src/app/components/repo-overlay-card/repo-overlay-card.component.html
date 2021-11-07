@@ -1,0 +1,16 @@
+<div class="card-container">
+  <h2>{{repo.full_name}}</h2>
+
+  <p class="id">ID: <br>{{repo.id}}</p>
+
+  <p class="description">Description: <br> <br> {{repo.description}}</p>
+  <p class="stars">Stars: {{repo.stargazers_count}}</p>
+  <p class="forks">Forks: {{repo.forks}}</p>
+  <p class="language">Language: {{repo.language ? repo.language : 'Not available.'}}</p>
+  
+  <div class="footer-card">
+      <img src="{{repo.owner.avatar_url}}" alt="avatar" class="avatar">
+      <p class="owner">Owner: <br> {{repo.owner.login}}</p>  
+  </div>
+  <app-button class="visit-button" [title]="visit" [url]="repo.html_url"></app-button>
+</div>

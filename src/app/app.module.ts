@@ -10,6 +10,7 @@ import { UsersComponent } from './components/users/users.component';
 import { ButtonComponent } from './components/button/button.component';
 import { SearchFilterPipe } from './pipes/search-pipe';
 import { FormsModule } from '@angular/forms';
+import { RepoOverlayCardComponent } from './components/repo-overlay-card/repo-overlay-card.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     UsersComponent,
     ButtonComponent,
     SearchFilterPipe,
+    RepoOverlayCardComponent,
   ],
   imports: [
     BrowserModule,

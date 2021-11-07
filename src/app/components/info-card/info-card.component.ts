@@ -8,11 +8,23 @@ import { Repository } from 'src/app/interfaces/repositories';
 })
 export class InfoCardComponent implements OnInit {
   @Input() repo: any;
-  visit = 'Visit';
+  avatar = "";
+  url = "";
+  clicked: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
+   
   }
 
+  ngOnInit(): void {
+    this.url = this.repo.archieve_url;
+    this.avatar = this.repo.owner.avatar_url;
+  }
+  toggleOverlay() {
+    this.clicked = !this.clicked;
+  }
+
+  getUrl() {
+    return '({{this.repo.owner.avatar_url}})';
+  }
 }

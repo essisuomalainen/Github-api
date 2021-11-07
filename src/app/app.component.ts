@@ -18,34 +18,23 @@ export class AppComponent {
     this.getRepos();
   }
 
-    getRepos(): void {
-     this.githubService.getRepos().subscribe((data) => {
-         console.log(data);
-         this.repos = data;
-         this.content = this.repos;
-       });
-     }
- 
-   searchThis(data: any) {
-     this.content = this.repos;
-     console.log(this.content, 'content');
-     if (data) {
-       this.content = this.content.filter((ele, i, array) => {
-         let arrayelement = ele.name.toLowerCase();
-         return arrayelement.includes(data);
-       });
-     }
-     else {
-       console.log(this.content)
-     }
-     console.log(this.content)
-   }
-
-/*  async getUsers() {
-   await this.githubService.getData().subscribe((data) => {
+  getRepos(): void {
+    this.githubService.getRepos().subscribe((data) => {
       console.log(data);
-     this.users = data;
+      this.repos = data.items;
+      this.content = this.repos;
+      console.log(this.content, 'content')
     });
-  } */
+  }
 
+  searchThis(data: any) {
+    this.content = this.repos;
+    console.log(this.content, 'content');
+    if (data) {
+      this.content = this.content.filter((ele, i, array) => {
+        let arrayelement = ele.name.toLowerCase();
+        return arrayelement.includes(data);
+      });
+    }
+  }
 }

@@ -1,0 +1,66 @@
+.card-container {
+  width: 35rem;
+  height: 27rem;
+  background-color: ghostwhite;
+  border-radius: 5px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 20% 15% 30% 15% 15%;
+}
+
+.language {
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.id {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin: 2rem 0 0 4rem;
+}
+
+.stars {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin-left: 4rem;
+}
+
+.forks {
+  grid-column-start: 2;
+  grid-row-start: 3;
+  margin-left: 4rem;
+}
+
+.description {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+
+.visit-button {
+  grid-column-start: 2;
+  grid-row-start: 5;
+  align-self: flex-end;
+  margin-left: 3rem;
+}
+
+.footer-card {
+  grid-column: 1 / span 2;
+  grid-row-start: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.owner {
+  margin-top: 0;
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 0.5rem;
+}

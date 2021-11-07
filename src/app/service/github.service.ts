@@ -9,15 +9,9 @@ export class GithubService {
 
   constructor(private http: HttpClient) { }
 
-
-  /* getData(): Observable<any> {
-    return this.http.get("https://api.github.com/search/repositories?q=stars:>=10000+&sort=stars&order=desc");
-   /*  const url = 'https://api.github.com/users';
-    return this.http.get<any>(url) 
-  } */
-
   getRepos(): Observable<any> {
-    const url = 'https://api.github.com/repositories';
-    return this.http.get<any>(url)
+    const url = 'https://api.github.com/search/repositories?q=stars:>100000';
+    return this.http.get<any>(url);
   }
+
 }
