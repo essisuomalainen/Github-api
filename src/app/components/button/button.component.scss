@@ -1,8 +1,8 @@
 button {
-    color: rgb(39, 38, 38) !important;
+    color: rgb(221, 219, 219) !important;
 	text-transform: uppercase;
 	text-decoration: none;
-	background: white;
+	background: black;
     padding: 0.8rem;
 	border-radius: 5px;
 	display: inline-block;
@@ -13,6 +13,7 @@ button {
 }
 a {
     text-decoration: none;
+    color:rgb(221, 219, 219);
 }
 
 button:hover {
