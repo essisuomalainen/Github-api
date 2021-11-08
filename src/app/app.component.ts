@@ -20,7 +20,6 @@ export class AppComponent {
 
   getRepos(): void {
     this.githubService.getRepos().subscribe((data) => {
-      console.log(data);
       this.repos = data.items;
       this.content = this.repos;
     });
