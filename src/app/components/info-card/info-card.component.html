@@ -5,6 +5,6 @@
   <p>Stars: {{repo.stargazers_count}}</p>
 </div>
 <div class="overlay" *ngIf="clicked" (click)="toggleOverlay()" >
-    <app-repo-overlay-card *ngIf="clicked" [repo]="repo"></app-repo-overlay-card>
+    <app-repo-overlay-card *ngIf="clicked" [repo]="repo" class="overlay-card"></app-repo-overlay-card>
 </div>
 

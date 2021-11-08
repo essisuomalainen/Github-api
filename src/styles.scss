@@ -3,18 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 h1 {
-    color: rgb(27, 27, 27);
-    font-size: 300%;
-  }
-  
-  body {
-    background: linear-gradient(90deg, rgba(227, 177, 242, 1) 0%, rgba(194, 170, 242, 1) 35%, rgba(130, 229, 249, 1) 100%);
-    margin: 0;
-    overflow: auto;
-  }
- 
-  /* everywhere else */
-  * {
-      box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
+  color: rgb(27, 27, 27);
+  font-size: 300%;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(227, 177, 242, 1) 0%, rgba(194, 170, 242, 1) 35%, rgba(130, 229, 249, 1) 100%);
+  overflow: auto;
+}
+
+/* everywhere else */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
