@@ -64,3 +64,27 @@
   height: 5rem;
   margin-right: 0.5rem;
 }
+
+@media screen and (max-width: 720px) { 
+  .card-container {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    height: 32rem;
+  }
+
+.id, .forks, .stars {
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 1rem;
+}
+.language {
+  margin-bottom: 1rem;
+}
+}

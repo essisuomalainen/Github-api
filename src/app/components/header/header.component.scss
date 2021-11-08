@@ -28,4 +28,24 @@ h1 {
     padding: 0.5rem;
   }
   
-
+  @media screen and (max-width: 720px) {
+    h1 {
+      width: auto;
+      margin: 1.5rem;
+    }
+    
+    input {
+     width: 20rem;;
+    }
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .search-container {
+      align-self: center;
+    }
+    .search-bar-container {
+      width: auto;
+    }
+  }
