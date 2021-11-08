@@ -10,7 +10,7 @@ export class GithubService {
   constructor(private http: HttpClient) { }
 
   getRepos(): Observable<any> {
-    const url = 'https://api.github.com/search/repositories?q=stars:>100000';
+    const url = 'https://api.github.com/search/repositories?q=stars:>10000';
     return this.http.get<any>(url);
   }
 
