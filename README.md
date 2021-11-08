@@ -1,6 +1,6 @@
 # Github repositories
 
-A web app for browsing Githubs most popular repositories. 
+A web app for browsing Githubs most popular repositories (over 100 000 stars). The user can search for a specific repository and get more information about the repositories by clicking the cards. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
