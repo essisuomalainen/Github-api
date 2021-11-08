@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "ansi-html-community": "^0.0.8",
     "@angular/animations": "~11.2.0",
     "@angular/common": "~11.2.0",
     "@angular/compiler": "~11.2.0",
@@ -23,9 +24,14 @@
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
+  "ansi-html-community": {
+    "version": "0.0.8",
+    "resolved": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
+    "integrity": "sha512-1APHAyr3+PCamwNw3bXCPp4HFLONZt/yIH0sZp0/469KWNTEy+qN5jQ3GVX6DMZ1UXAi34yVwtTeaG/HpBuuzw=="
+  },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.0",
-    "@angular/cli": "~11.2.0",
+    "@angular-devkit/build-angular": "^0.1102.15",
+    "@angular/cli": "^11.2.15",
     "@angular/compiler-cli": "~11.2.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
@@ -38,9 +44,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
+    "set-value": ">=4.0.1",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2",
-    "set-value": ">=4.0.1"
+    "typescript": "~4.1.2"
   }
 }
