@@ -1,4 +1,6 @@
-# FuturiceAssignment
+# Github repositories
+
+A web app for browsing Githubs most popular repositories. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
