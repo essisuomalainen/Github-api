@@ -11,32 +11,13 @@ export class HeaderComponent implements OnInit {
 @Input() data: Repository[] = [];
 search = 'Search';
 searchWord = '';
-@Output() searchcriteria = new EventEmitter<String>();
+@Output() searchcriteria = new EventEmitter<string>();
 
   
   constructor() { }
   searchThis() {
     this.searchcriteria.emit(this.searchWord);
 }
- /*  content: Repository[] = [];
-  newArray = [];
-
-  searchThis(data: any) {
-    this.content = this.newArray;
-    console.log(data);
-    if (data) {
-      this.content = this.content.filter((ele, i, array) => {
-        let arrayelement = ele.name.toLowerCase();
-        return arrayelement.includes(data);
-      })
-    }
-    else {
-      console.log(this.content)
-    }
-    console.log(this.content)
-  } */
-
-
 
   ngOnInit(): void {
   }

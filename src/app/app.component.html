@@ -1,8 +1,6 @@
 <div class="container">
-<div class="header">
-<app-header [data]="content" [title]="title" (searchcriteria)="searchThis($event)"></app-header>
+  <div class="header">
+    <app-header [data]="content" [title]="title" (searchcriteria)="searchThis($event)"></app-header>
+  </div>
+  <app-footer [data]="content"></app-footer>
 </div>
-<app-users [users]="users"></app-users>
-<app-footer [data]="content"></app-footer>
-
-</div> 
