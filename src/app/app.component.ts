@@ -20,13 +20,19 @@ export class AppComponent {
 
   getRepos(): void {
     this.githubService.getRepos().subscribe((data) => {
-      this.repos = data.items;
-      this.content = this.repos;
+      this.content = data.items;
     });
   }
 
+  searchRepos(query: any) {
+    this.githubService.searchRepos(query).subscribe((response) => {
+     this.repos = response.items;
+     this.content = [...this.repos, ...this.content];
+      console.log(response, 'response');
+    })
+  }
+
   searchThis(data: any) {
-    this.content = this.repos;
     if (data) {
       this.content = this.content.filter((ele, i, array) => {
         let arrayelement = ele.name.toLowerCase();

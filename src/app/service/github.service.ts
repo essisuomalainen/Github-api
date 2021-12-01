@@ -14,4 +14,10 @@ export class GithubService {
     return this.http.get<any>(url);
   }
 
+  
+  searchRepos(query: string): Observable<any> {
+    const url = `https://api.github.com/search/repositories?q=${query}`;
+    return this.http.get<any>(url);
+  }
+
 }

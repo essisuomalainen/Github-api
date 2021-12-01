@@ -7,17 +7,29 @@ import { Repository } from 'src/app/interfaces/repositories';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-@Input() title = '';
-@Input() data: Repository[] = [];
-search = 'Search';
-searchWord = '';
-@Output() searchcriteria = new EventEmitter<string>();
+  @Input() title = '';
+  @Input() data: Repository[] = [];
+  search = 'Search';
+  searchWord = '';
+  query = '';
+  @Output() filtercriteria = new EventEmitter<string>();
+  @Output() searchcriteria = new EventEmitter<string>();
 
-  
+
   constructor() { }
   searchThis() {
-    this.searchcriteria.emit(this.searchWord);
-}
+    console.log('search this')
+    this.filtercriteria.emit(this.searchWord);
+    console.log(this.searchWord, 'search')
+  }
+
+  searchRepo() {
+    console.log('test')
+
+    this.searchcriteria.emit(this.query);
+    console.log(this.query, 'query')
+  }
+
 
   ngOnInit(): void {
   }

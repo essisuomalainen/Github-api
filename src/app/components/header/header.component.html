@@ -2,7 +2,11 @@
   <h1>{{title}}</h1>
 <div class="search-container">
     <div class="search-bar-container">
-        <input type="text" placeholder="Search for repos.." [(ngModel)]="searchWord" (input)="searchThis()" id="listSearch"></div>
+        <input type="text" placeholder="Filter the repos.." [(ngModel)]="searchWord" (input)="searchThis()" id="listSearch"></div>
+</div>
+<div class="search-container">
+  <div class="search-bar-container">
+      <input type="text" placeholder="Search for repos.." [(ngModel)]="query" (input)="searchRepo()" id="repoSearch"></div>
 </div>
   
 </div>

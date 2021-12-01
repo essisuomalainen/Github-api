@@ -1,4 +1,4 @@
   <div class="header">
-    <app-header [data]="content" [title]="title" (searchcriteria)="searchThis($event)"></app-header>
+    <app-header [data]="content" [title]="title" (searchcriteria)="searchRepos($event)" (filtercriteria)="searchThis($event)"></app-header>
   </div>
   <app-footer [data]="content"></app-footer>
